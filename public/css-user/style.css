@@ -1,0 +1,41 @@
+:root{
+    --space-all: 1.6% 2%;
+    --border-r:15px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+
+}
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: var(--space-all);
+}
+.logo a{
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.navbar a,.getin a{
+    margin: 0 10px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+}
+
+.navbar{
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: var(--border-r);
+}
