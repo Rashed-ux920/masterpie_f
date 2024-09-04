@@ -18,44 +18,170 @@
                     {{config('app.name')}}
                 </a>
             </div>
+            <div class="search">
+                <input type="search" name="search" id="serach">
+            </div>
             <div class="navbar">
-                <a href="#">home</a>
-                <a href="#">services</a>
-                <a href="#">contact</a>
+                <a href="#home">home</a>
+                <a href="#services">services</a>
+                <a href="#contact">contact</a>
             </div>
             <div class="getin">
 
                 @if (Route::has('login'))
                 <nav class="-mx-3 flex flex-1 justify-end">
                     @auth
-                        <a
-                            href="{{ url('/dashboard') }}"
-                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                        >
-                            Dashboard
+                        <a href="{{ route('dashboard') }}">
+                            {{Auth::user()->name}}
                         </a>
                     @else
-                        <a
-                            href="{{ route('login') }}"
-                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                        >
-                            Log in
+                        <a href="{{ route('login') }}">
+                            Login
                         </a>
 
                         @if (Route::has('register'))
-                            <a
-                                href="{{ route('register') }}"
-                                class=""
-                            >
+                            <a href="{{ route('register') }}">
                                 Register
                             </a>
                         @endif
                     @endauth
                 </nav>
                     @endif
-
             </div>
         </header>
 
+        <hr>
+
+        <section id="home">
+            <div class="contaner">
+                <div class="left">
+                    <img src="" alt="909">
+                </div>
+                <div class="right">
+                    <div class="card">
+                        {{-- <img src="#" alt="505"> --}}
+                        <h2>title</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur,<br>
+                            adipisicing elit. Itaque iste at magnam optio<br>
+                            accusantium sequi architecto labore dignissimos<br>
+                            enim quidem illum commodi sapiente ratione qui.
+                        </p>
+                        <a href="#" class="links">show</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="services">
+            <div class="contaner">
+                <div class="card">
+                    <img src="#" alt="505">
+                    <h2>title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur,<br>
+                        adipisicing elit. Itaque iste at magnam optio<br>
+                        accusantium sequi architecto labore dignissimos<br>
+                        enim quidem illum commodi sapiente ratione qui.
+                    </p>
+                    <a href="#" class="links">show</a>
+                </div>
+                <div class="card">
+                    <img src="#" alt="505">
+                    <h2>title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur,<br>
+                        adipisicing elit. Itaque iste at magnam optio<br>
+                        accusantium sequi architecto labore dignissimos<br>
+                        enim quidem illum commodi sapiente ratione qui.
+                    </p>
+                    <a href="#" class="links">show</a>
+                </div>
+                <div class="card">
+                    <img src="#" alt="505">
+                    <h2>title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur,<br>
+                        adipisicing elit. Itaque iste at magnam optio<br>
+                        accusantium sequi architecto labore dignissimos<br>
+                        enim quidem illum commodi sapiente ratione qui.
+                    </p>
+                    <a href="#" class="links">show</a>
+                </div>
+                <div class="card">
+                    <img src="#" alt="505">
+                    <h2>title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur,<br>
+                        adipisicing elit. Itaque iste at magnam optio<br>
+                        accusantium sequi architecto labore dignissimos<br>
+                        enim quidem illum commodi sapiente ratione qui.
+                    </p>
+                    <a href="#" class="links">show</a>
+                </div>
+                <div class="card">
+                    <img src="#" alt="505">
+                    <h2>title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur,<br>
+                        adipisicing elit. Itaque iste at magnam optio<br>
+                        accusantium sequi architecto labore dignissimos<br>
+                        enim quidem illum commodi sapiente ratione qui.
+                    </p>
+                    <a href="#" class="links">show</a>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <form action="#" method="post" class="form-1">
+                <div class="left">
+                    <input type="text" name="name" id="name" placeholder="Enter your name pleas">
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Enter your email pleas like: example@gmail.com">
+                </div>
+                <div class="right">
+                    <textarea name="massge" id="massge" cols="25" rows="3"></textarea>
+                    <br>
+                    <button type="submit">send</button>
+                </div>
+            </form>
+        </section>
+
+
+
+        <hr>
+
+        <footer>
+            <ul>
+                <li>
+                    spocialmedia
+                </li>
+                <li>facebook</li>
+                <li>instegram</li>
+                <li>snapchat</li>
+            </ul>
+            <ul>
+                <li>
+                    spocialmedia
+                </li>
+                <li>facebook</li>
+                <li>instegram</li>
+                <li>snapchat</li>
+            </ul>
+            <ul>
+                <li>
+                    spocialmedia
+                </li>
+                <li>facebook</li>
+                <li>instegram</li>
+                <li>snapchat</li>
+            </ul>
+        </footer>
     </body>
 </html>
