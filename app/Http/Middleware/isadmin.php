@@ -18,7 +18,8 @@ class isadmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        dd('middleware');
+        // dd('middleware');
+        
         return $next($request);
     }
 }

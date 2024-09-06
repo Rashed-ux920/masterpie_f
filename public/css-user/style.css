@@ -1,6 +1,7 @@
 :root{
     --space-all: 1.6% 2%;
     --border-r:15px;
+    --section-c: #f0f0f0;
 }
 *{
     margin: 0;
@@ -17,6 +18,8 @@ a{
 }
 section{
     padding: 5rem 0;
+    margin-top: 9rem;
+    background: var(--section-c);
 }
 ul{
     list-style: none;
@@ -27,7 +30,9 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
+    position: fixed;
+    width: 97%;
+    background: #fef0fef0;
     padding: var(--space-all);
 }
 .logo a{
@@ -90,6 +95,9 @@ header{
     padding: 1%;
     text-align: center;
     border-radius: 10px;
+}
+#contact{
+    margin-bottom: 9rem;
 }
 footer
 {

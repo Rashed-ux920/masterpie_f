@@ -5,7 +5,7 @@ use App\Http\Controllers\viewcontroller;
 use Illuminate\Support\Facades\Route;
 use App\http\Middleware\isadmin;
 
-Route::get('/', [viewcontroller::class,'landinguser'])->middleware(isadmin::class);
+Route::get('/', [viewcontroller::class,'landinguser'])->middleware('isadmin')->name('landingpage');
 
 Route::get('/dashboard', [viewcontroller::class, 'landingadmin'])->middleware(['auth', 'verified'])->name('dashboard');
 
