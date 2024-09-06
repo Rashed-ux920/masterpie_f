@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\viewcontroller;
 use Illuminate\Support\Facades\Route;
 use App\http\Middleware\isadmin;
@@ -8,6 +9,9 @@ use App\http\Middleware\isadmin;
 Route::get('/', [viewcontroller::class,'landinguser'])->middleware('isadmin')->name('landingpage');
 
 Route::get('/dashboard', [viewcontroller::class, 'landingadmin'])->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/adashboard/services', [ServicesController::class, 'index'])->name('services');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

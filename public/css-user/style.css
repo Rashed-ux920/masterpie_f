@@ -32,7 +32,7 @@ header{
     align-items: center;
     position: fixed;
     width: 97%;
-    background: #fef0fef0;
+    background: #0e0e0e;
     padding: var(--space-all);
 }
 .logo a{
