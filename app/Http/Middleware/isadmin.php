@@ -20,6 +20,6 @@ class isadmin
     {
         // dd('middleware');
         
-        return $next($request);
+            return $next($request);
     }
 }
